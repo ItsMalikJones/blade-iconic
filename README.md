@@ -1,87 +1,84 @@
-# :package_description
+# Blade Iconic
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/run-tests?label=tests)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
+<a href="https://github.com/ItsMalikJones/blade-iconic/actions?query=workflow%3ATests">
+    <img src="https://github.com/ItsMalikJones/blade-iconic/workflows/Tests/badge.svg" alt="Tests">
+</a>
+<a href="https://packagist.org/packages/ItsMalikJones/blade-iconic">
+    <img src="https://img.shields.io/packagist/v/ItsMalikJones/blade-iconic" alt="Latest Stable Version">
+</a>
+<a href="https://packagist.org/packages/ItsMalikJones/blade-iconic">
+    <img src="https://img.shields.io/packagist/dt/ItsMalikJones/blade-iconic" alt="Total Downloads">
+</a>
 
----
-This repo can be used as to scaffold a Laravel package. Follow these steps to get started:
+A package to easily make use of [Iconic](https://www.iconic.app) icons in your Laravel Blade views.
 
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton
-2. Run "./configure-skeleton.sh" to run a script that will replace all placeholders throughout all the files
-3. Remove this block of text.
-4. Have fun creating your package.
-5. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
+For a full list of available icons see [the SVG directory](./resources/svg). Iconic icons are originally developed by [Make Lemonade](https://makelemonade.wtf/).
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+## Requirements
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+- PHP 7.4 or higher
+- Laravel 8.0 or higher
 
 ## Installation
 
-You can install the package via composer:
-
 ```bash
-composer require vendor_slug/package_slug
+composer require itsmalikjones/blade-iconic
 ```
 
-You can publish and run the migrations with:
+## Blade Icons
+
+Blade Iconic uses Blade Icons under the hood. Please refer to [the Blade Icons readme](https://github.com/blade-ui-kit/blade-icons) for additional functionality. We also recommend to [enable icon caching](https://github.com/blade-ui-kit/blade-icons#caching) with this library.
+
+## Configuration
+
+Blade Iconic also offers the ability to use features from Blade Icons like default classes, default attributes, etc. If you'd like to configure these, publish the `blade-iconic.php` config file:
 
 ```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag="package_slug-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag="package_slug-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
+php artisan vendor:publish --tag=blade-iconic-config
 ```
 
 ## Usage
 
-```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+Icons can be used as self-closing Blade components which will be compiled to SVG icons:
+
+```blade
+<x-iconic-star/>
 ```
 
-## Testing
+You can also pass classes to your icon components:
+
+```blade
+<x-iconic-star class="w-6 h-6 text-gray-500"/>
+```
+
+And even use inline styles:
+
+```blade
+<x-iconic-star style="color: #555"/>
+```
+
+### Raw SVG Icons
+
+If you want to use the raw SVG icons as assets, you can publish them using:
 
 ```bash
-composer test
+php artisan vendor:publish --tag=blade-iconic --force
+```
+
+Then use them in your views like:
+
+```blade
+<img src="{{ asset('vendor/blade-iconic/star.svg') }}" width="10" height="10"/>
 ```
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
+## Maintainers
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
+Blade Iconic is developed and maintained by [Malik Alleyne-Jones](https://twitter.com/ItsMalikJones).
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Blade Iconic is open-sourced software licensed under [the MIT license](LICENSE.md).

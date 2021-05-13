@@ -1,24 +1,28 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "itsmalikjones/blade-iconic",
+    "description": "A package to easily make use of Iconic icons in your Laravel Blade views",
     "keywords": [
-        ":vendor_name",
-        "laravel",
-        "package_slug"
+        "Blade",
+        "Iconic",
+        "Laravel"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/itsmalikjones/blade-iconic",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/itsmalikjones/blade-iconic/issues",
+        "source": "https://github.com/itsmalikjones/blade-iconic"
+    },
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "Malik Alleyne-Jones",
+            "homepage": "https://twitter.com/ItsMalikJones"
         }
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "blade-ui-kit/blade-icons": "^1.0",
+        "illuminate/contracts": "^8.37",
+        "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -30,13 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "ItsMalikJones\\BladeIconic\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "ItsMalikJones\\BladeIconic\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,11 +53,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "ItsMalikJones\\BladeIconic\\BladeIconicServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

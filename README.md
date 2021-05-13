@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/packagist/dt/ItsMalikJones/blade-iconic" alt="Total Downloads">
 </a>
 
-A package to easily make use of [Iconic](https://www.iconic.app) icons in your Laravel Blade views.
+A package to easily make use of [Iconic](https://iconic.app/) icons in your Laravel Blade views.
 
 For a full list of available icons see [the SVG directory](./resources/svg). Iconic icons are originally developed by [Make Lemonade](https://makelemonade.wtf/).
 

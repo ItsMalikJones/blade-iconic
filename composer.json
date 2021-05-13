@@ -20,9 +20,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "blade-ui-kit/blade-icons": "^1.0",
-        "illuminate/contracts": "^8.37",
-        "spatie/laravel-package-tools": "^1.4.3"
+        "blade-ui-kit/blade-icons": "^1.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.15",

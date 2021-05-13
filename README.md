@@ -1,8 +1,10 @@
+<p align="center">
+    <img src="https://repository-images.githubusercontent.com/366932039/374f5b00-b382-11eb-9ac3-355a78d79852" width="1280" title="Social Card Blade Iconic">
+</p>
+
 # Blade Iconic
 
-<a href="https://github.com/ItsMalikJones/blade-iconic/actions?query=workflow%3ATests">
-    <img src="https://github.com/ItsMalikJones/blade-iconic/workflows/Tests/badge.svg" alt="Tests">
-</a>
+[![run-tests](https://github.com/ItsMalikJones/blade-iconic/actions/workflows/run-tests.yml/badge.svg)](https://github.com/ItsMalikJones/blade-iconic/actions/workflows/run-tests.yml)
 <a href="https://packagist.org/packages/ItsMalikJones/blade-iconic">
     <img src="https://img.shields.io/packagist/v/ItsMalikJones/blade-iconic" alt="Latest Stable Version">
 </a>
@@ -10,7 +12,7 @@
     <img src="https://img.shields.io/packagist/dt/ItsMalikJones/blade-iconic" alt="Total Downloads">
 </a>
 
-A package to easily make use of [Iconic](https://www.iconic.app) icons in your Laravel Blade views.
+A package to easily make use of [Iconic](https://iconic.app/) icons in your Laravel Blade views.
 
 For a full list of available icons see [the SVG directory](./resources/svg). Iconic icons are originally developed by [Make Lemonade](https://makelemonade.wtf/).
 
